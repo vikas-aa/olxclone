@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.7.10' // Specify your Kotlin version
+    ext {
+        compileSdkVersion = 33 // Set the compile SDK version
+        targetSdkVersion = 33 // Set the target SDK version
+        minSdkVersion = 23 // Set the minimum SDK version
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.3.0" // Update to a compatible version
+        classpath "com.google.gms:google-services:4.3.15" // Use the correct version
+    }
+}
+
+// Ensure these are outside the buildscript block
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

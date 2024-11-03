@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "900231571435",
+    "project_id": "rental-a3bc9",
+    "storage_bucket": "rental-a3bc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900231571435:android:446cf4986ee8184fac5bae",
+        "android_client_info": {
+          "package_name": "com.example.olx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgAMLf6dvKSr5PMEEeNGuOF0TAYY7dpC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900231571435:android:362af1d2c0d06374ac5bae",
+        "android_client_info": {
+          "package_name": "com.example.olx_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgAMLf6dvKSr5PMEEeNGuOF0TAYY7dpC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

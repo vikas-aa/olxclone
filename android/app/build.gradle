@@ -1,0 +1,55 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin" // Ensure this matches your Flutter setup
+    id "com.google.gms.google-services" // Google services plugin
+}
+
+android {
+    namespace = "com.example.olx_clone" // Your package name
+    compileSdk = 34 // Reference to root project variable
+
+    defaultConfig {
+        applicationId = "com.example.olx_clone" // Your unique application ID
+        minSdk = 23 // Minimum SDK version
+        targetSdk = 34// Target SDK version
+        versionCode = 1 // Update with your version code
+        versionName = "1.0" // Update with your version name
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+ }
+    lintOptions {
+        // To enable deprecation warnings
+        warning 'deprecation'
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8" // Ensure this is a string value
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true // Disable code shrinking
+            shrinkResources true // Disable resource shrinking
+            signingConfig signingConfigs.debug // Use debug signing for now
+        }
+
+        debug {
+            minifyEnabled false // Disable shrinking for debug builds
+            shrinkResources false
+        }
+    }
+}
+
+flutter {
+    source = "../.." // Adjust this path if necessary
+}
+
+dependencies {
+    implementation platform("com.google.firebase:firebase-bom:33.3.0") // Firebase BoM for version management
+    implementation "com.google.firebase:firebase-analytics" // Firebase Analytics dependency
+    // Add other Firebase or app-specific dependencies as needed
+}
